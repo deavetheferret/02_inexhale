@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="cursor"></div>
-    <!-- <section class="start-screen">
+    <section class="start-screen">
       <h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -92,36 +92,47 @@
         </svg>
       </h1>
       <p class="start-screen-p">Ressourcez-vous avec la cohérence cardiaque.</p>
-    </section> -->
+    </section>
     <section class="duration-screen">
       <p class="duration-screen-p">Durée</p>
       <div class="duration-screen-time">
         <div class="duration-screen-time-choice choice-1 interactable">
-          <span class="time">1</span>
+          <span class="time" data-time="1">1</span>
           <p class="time-label">minute</p>
         </div>
         <div class="duration-screen-time-choice choice-2 interactable">
-          <span class="time">2</span>
+          <span class="time" data-time="2">2</span>
           <p class="time-label">minutes</p>
         </div>
         <div class="duration-screen-time-choice choice-3 interactable">
-          <span class="time">3</span>
+          <span class="time" data-time="3">3</span>
           <p class="time-label">minutes</p>
         </div>
         <div
           class="duration-screen-time-choice choice-4 interactable user-choice"
         >
-          <span class="time">4</span>
+          <span class="time" data-time="4">4</span>
           <p class="time-label">minutes</p>
         </div>
         <div class="duration-screen-time-choice choice-5 interactable">
-          <span class="time">5</span>
+          <span class="time" data-time="4">5</span>
           <p class="time-label">minutes</p>
         </div>
       </div>
       <button type="submit" class="duration-screen-start-button interactable">
         Commencer la séance
       </button>
+    </section>
+    <section class="countdown-screen">
+      <span class="countdown countdown-3">3</span>
+      <span class="countdown countdown-2">2</span>
+      <span class="countdown countdown-1">1</span>
+    </section>
+    <section class="exercise-screen">
+      <div class="focus-ring"><span class="focus-text">Inspirez</span></div>
+    </section>
+    <section class="end-screen">
+      <h2>Félicitations !</h2>
     </section>
     <script src="js/main.js" type="module"></script>
   </body>

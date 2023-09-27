@@ -46,25 +46,25 @@ video {
 // base rules
 // ==================================== */
 
-.cursor {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid var(--Black);
-  background-color: #00000000;
-  transition: background-color 0.3s;
-  &.focus-cursor {
-    background-color: var(--Black);
-  }
-}
+// .cursor {
+//   position: absolute;
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+//   border: 1px solid var(--Black);
+//   background-color: #00000000;
+//   transition: background-color 0.3s;
+//   cursor: none;
+//   user-select: none;
+//   &.focus-cursor {
+//     background-color: var(--Black);
+//   }
+// }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  position: relative;
 }
 
 p {
@@ -75,13 +75,21 @@ p {
 }
 
 .start-screen {
+  // position: absolute;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 40px;
 }
 
 .duration-screen {
+  // opacity: 0;
+  // position: absolute;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,17 +105,21 @@ p {
       flex-direction: column;
       align-items: center;
       color: var(--Disabled);
+      cursor: pointer;
       span.time {
         text-align: center;
         font-family: Helvetica Neue;
         font-size: 100px;
         font-weight: 400;
         margin-bottom: -10px;
+        transition: color 0.2s ease-in-out;
       }
       p.time-label {
         color: inherit;
+        transition: color 0.2s ease-in-out;
       }
-      &.user-choice {
+      &.user-choice,
+      &:hover {
         color: var(--Black);
         p.time-label {
           color: inherit;
@@ -129,9 +141,67 @@ p {
     font-size: 32px;
     font-weight: 300;
     transition: 0.3s;
+    cursor: pointer;
     &:hover {
       background-color: var(--Black);
       color: var(--White);
     }
+  }
+}
+
+.countdown-screen {
+  // opacity: 0;
+  // position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  span.countdown {
+    opacity: 0;
+    font-family: "Helvetica Neue";
+    font-size: 200px;
+    font-weight: 400;
+    position: absolute;
+  }
+}
+
+.exercise-screen {
+  // opacity: 0;
+  // position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .focus-ring {
+    aspect-ratio: 1/1;
+    width: 300px;
+    border-radius: 300px;
+    border: 5px solid var(--Black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span.focus-text {
+      font-family: Helvetica Neue;
+      font-size: 32px;
+      font-weight: 300;
+    }
+  }
+}
+
+.end-screen {
+  // opacity: 0;
+  // position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-family: Helvetica Neue;
+    font-size: 50px;
+    font-weight: 300;
   }
 }
